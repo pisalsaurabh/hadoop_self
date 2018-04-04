@@ -5,7 +5,7 @@ class MoviesRatings(MRJob):
     def steps(self):
         return [
             MRStep(mapper=self.mapper_get_ratings,
-                   reducer=self.reducer_count_ratings)
+                   reducer=self.reducer_count_ratings),
             MRStep(reducer=self.reducer_sort_output)  #another reducer
         ]
 
@@ -19,8 +19,8 @@ class MoviesRatings(MRJob):
         
      # Pass this reducer output to this below reducer   
     def reducer_sort_output(self,count,movies):
-        for pointer in movies  #movies is list
-            yeild pointer,count
+        for pointer in movies:  #movies is list
+            yield pointer,count
 
 if __name__ == '__main__':
     MoviesRatings.run()
