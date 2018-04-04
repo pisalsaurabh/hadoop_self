@@ -1,4 +1,4 @@
-rom mrjob.job import MRJob
+from mrjob.job import MRJob
 from mrjob.step import MRStep
 
 class MoviesRatings(MRJob):
@@ -23,5 +23,5 @@ class MoviesRatings(MRJob):
             yeild pointer,count
 
 if __name__ == '__main__':
-    RatingsBreakdown.run()
+    MoviesRatings.run()
 
