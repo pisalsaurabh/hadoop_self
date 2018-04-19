@@ -7,7 +7,7 @@ class SaurabhWeek13():
             longitude = pointer[34:41]
             qualitycode = pointer[63]
             temperature = pointer[87:92]
-            print()
+            print("Row inserted")
             file2.write(longitude + "\t" + temperature + "\t" + qualitycode + "\n")
 
 if __name__ == '__main__':
