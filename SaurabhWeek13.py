@@ -11,5 +11,5 @@ class SaurabhWeek13():
             file2.write(longitude + "\t" + temperature + "\t" + qualitycode + "\n")
 
 if __name__ == '__main__':
-    SaurabhWeek13.run()
+    SaurabhWeek13.extract()
 
